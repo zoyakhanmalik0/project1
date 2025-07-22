@@ -3,10 +3,10 @@ import { Download } from 'lucide-react';
 
 const DownloadPage = () => {
   return (
-    <div className="min-h-screen bg-amber-50 flex flex-col items-center text-center p-4">
+    <div className="min-h-screen bg-amber-50 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8 py-6">
 
       {/* Top Image Section */}
-      <div className="w-full max-w-2xl mb-8 mt-6">
+      <div className="w-full max-w-2xl mb-8">
         <img
           src="https://apkfbi.com/wp-content/uploads/2025/03/1-1.webp"
           alt="Game Preview"
@@ -39,7 +39,7 @@ const DownloadPage = () => {
       </div>
 
       {/* Second Image Section */}
-      <div className="w-full max-w-3xl mt-4 mb-10">
+      <div className="w-full max-w-3xl mb-10">
         <img
           src="https://miro.medium.com/v2/resize:fit:1280/1*1cPINnY3SbqkqC4TLAL43g.jpeg"
           alt="3 Patti Promotion"
@@ -93,7 +93,7 @@ const DownloadPage = () => {
       </div>
 
       {/* Final Image Section */}
-      <div className="w-full max-w-2xl mt-6 mb-10">
+      <div className="w-full max-w-2xl mb-10">
         <img
           src="https://miro.medium.com/v2/resize:fit:694/1*O3xsvJ5O5t22A0v6IyE2Ag.jpeg"
           alt="Game Bonus Poster"

@@ -32,23 +32,30 @@ const PopularCategories = () => {
   ];
 
   return (
-    <div className="mb-16">
-      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Popular Categories</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="mb-16 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-800 mb-12">
+        Popular Categories
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         {categories.map(category => (
           <div
             key={category.id}
-            className="relative rounded-2xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105 shadow-xl h-[22rem]"
+            className="relative rounded-2xl overflow-hidden group cursor-pointer transform transition-all hover:scale-105 shadow-lg"
             onClick={() => navigate(category.path)}
           >
-            <img
-              src={category.image}
-              alt={category.title}
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-square">
+              <img
+                src={category.image}
+                alt={category.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end">
-              <div className="p-6">
-                <h3 className="text-white font-bold text-2xl">{category.title}</h3>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-white font-bold text-xl sm:text-2xl">
+                  {category.title}
+                </h3>
               </div>
             </div>
           </div>
@@ -57,7 +64,7 @@ const PopularCategories = () => {
 
       <div className="text-center mt-10">
         <button
-          className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-xl text-lg font-semibold transition-colors"
+          className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold transition-colors"
           onClick={() => navigate('/all-categories')}
         >
           Explore Them All

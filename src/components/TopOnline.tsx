@@ -4,41 +4,37 @@ import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 
 function App() {
-    const navigate = useNavigate(); // ✅ You forgot to call this
+    const navigate = useNavigate();
 
     return (
         <div className="min-h-screen bg-orange-50">
-            {/* Header */}
             <Header />
 
-            {/* Article Content Wrapper */}
-            <div className="max-w-4xl mx-auto px-4 py-10">
-                <section className="bg-white rounded-xl shadow-lg px-6 py-12">
-                    {/* Article Header */}
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <section className="bg-white rounded-xl shadow-lg px-4 sm:px-6 md:px-10 py-8 sm:py-12">
+                    <div className="text-center mb-10 sm:mb-12">
+                        <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
                             Top Online Mobile Games in Pakistan (2025 Edition)
                         </h1>
 
                         {/* Hero Image */}
-                        <div className="mb-8">
-                            <img
-                                src="https://www.barlarlardown.online/images/post-img-1.jpg"
-                                alt="Gamer playing mobile games"
-                                className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
-                            />
+                        <div className="mb-6 sm:mb-8">
+                            <div className="w-full max-w-2xl mx-auto aspect-[16/9]">
+                                <img
+                                    src="https://www.barlarlardown.online/images/post-img-1.jpg"
+                                    alt="Gamer playing mobile games"
+                                    className="w-full h-full object-cover rounded-lg shadow-md"
+                                />
+                            </div>
                         </div>
 
                         {/* Introduction */}
                         <div className="text-left max-w-3xl mx-auto">
-                            <p className="text-gray-700 leading-relaxed mb-6">
+                            <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-6">
                                 Pakistan's mobile gaming landscape is growing rapidly, and the range of top online games
                                 available to Pakistani players has never been more diverse. With improved mobile
                                 internet access, affordable smartphones, and a rising population eager for digital
-                                entertainment, online mobile games have become a popular pastime for millions. Whether
-                                you're into action-packed battle royales, strategic gameplay, or casual puzzle games, there's
-                                something for everyone. In this article, we explore the top online mobile games currently
-                                trending in Pakistan.
+                                entertainment, online mobile games have become a popular pastime for millions...
                             </p>
                         </div>
                     </div>
@@ -119,12 +115,14 @@ function App() {
                             ]
                         }
                     ].map((game, index) => (
-                        <section className="mb-10" key={index}>
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        <section className="mb-8 sm:mb-10" key={index}>
+                            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                                 {game.title}
                             </h2>
-                            <p className="text-gray-700 leading-relaxed mb-4">{game.desc}</p>
-                            <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-3">
+                                {game.desc}
+                            </p>
+                            <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base space-y-2 ml-4">
                                 {game.points.map((point, i) => (
                                     <li key={i}>{point}</li>
                                 ))}
@@ -134,22 +132,24 @@ function App() {
 
                     {/* Bonus Mentions */}
                     <section className="mb-10">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">Bonus Mentions:</h2>
-                        <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
-                            <li><strong>Among Us</strong> - Social deduction fun, still popular in casual groups</li>
-                            <li><strong>Clash Royale</strong> - Strategy-based card game with incredible gameplay</li>
-                            <li><strong>My Talking Tom</strong> - Loved by kids and families</li>
+                        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Bonus Mentions:</h2>
+                        <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base space-y-2 ml-4">
+                            <li><strong>Among Us</strong> – Social deduction fun, still popular in casual groups</li>
+                            <li><strong>Clash Royale</strong> – Strategy-based card game with incredible gameplay</li>
+                            <li><strong>My Talking Tom</strong> – Loved by kids and families</li>
                         </ul>
                     </section>
 
                     {/* Final Thoughts */}
-                    <section className="mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Final Thoughts</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
+                    <section className="mb-10 sm:mb-12">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                            Final Thoughts
+                        </h2>
+                        <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
                             Pakistan's mobile gaming audience is growing rapidly. Whether you're into competitive
                             shooters or casual puzzle games, there's something for everyone.
                         </p>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                             Let us know your favorite mobile game in the comments, and stay tuned for our blog for more
                             gaming content!
                         </p>
@@ -159,16 +159,14 @@ function App() {
                     <div className="flex justify-end items-center mb-4">
                         <button
                             onClick={() => navigate('/guides/how-to-play-111-patti')}
-                            className="text-orange-500 hover:text-orange-600 transition-colors"
+                            className="text-orange-500 hover:text-orange-600 transition-colors text-sm sm:text-base"
                         >
                             Next Post →
                         </button>
                     </div>
-
                 </section>
             </div>
 
-            {/* Footer */}
             <Footer />
         </div>
     );

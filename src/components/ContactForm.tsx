@@ -1,3 +1,5 @@
+// ✅ Responsive ContactForm.tsx (Logic unchanged)
+
 import React, { useState } from 'react';
 import { CheckCircle, User, Mail, Phone, MessageSquare } from 'lucide-react';
 import Header from './Header';
@@ -28,21 +30,17 @@ const ContactForm = () => {
         const newErrors: Partial<FormData> = {};
 
         if (!formData.name.trim()) newErrors.name = 'Name is required';
-
         if (!formData.email.trim()) {
             newErrors.email = 'Email is required';
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             newErrors.email = 'Email is invalid';
         }
-
         if (!formData.phone.trim()) {
             newErrors.phone = 'Phone number is required';
         } else if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
             newErrors.phone = 'Phone number must be 10 digits';
         }
-
         if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
-
         if (!formData.message.trim()) {
             newErrors.message = 'Message is required';
         } else if (formData.message.length < 10) {
@@ -69,7 +67,7 @@ const ContactForm = () => {
         if (!validateForm()) return;
 
         setIsSubmitting(true);
-        await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulated API
+        await new Promise((resolve) => setTimeout(resolve, 1500));
         setIsSubmitting(false);
         setIsSubmitted(true);
     };
@@ -85,10 +83,10 @@ const ContactForm = () => {
             <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 flex flex-col">
                 <Header />
                 <div className="flex-grow flex items-center justify-center px-4 py-12">
-                    <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
-                        <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-4" />
-                        <h2 className="text-3xl font-bold text-gray-800 mb-2">Congratulations!</h2>
-                        <p className="text-gray-600 text-lg">Your message has been sent successfully!</p>
+                    <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-6 sm:p-8 text-center">
+                        <CheckCircle className="w-16 h-16 sm:w-20 sm:h-20 text-green-500 mx-auto mb-4" />
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Congratulations!</h2>
+                        <p className="text-gray-600 text-base sm:text-lg">Your message has been sent successfully!</p>
                         <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-6 mb-6">
                             <p className="text-green-800 text-sm">
                                 Thank you for reaching out. We'll respond within 24 hours.
@@ -110,15 +108,15 @@ const ContactForm = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-50 flex flex-col">
             <Header />
-            <div className="flex-grow py-12 px-4">
-                <div className="max-w-2xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h1>
-                        <p className="text-xl text-gray-600">
+            <div className="flex-grow py-8 sm:py-12 px-4 sm:px-6 md:px-8">
+                <div className="max-w-3xl mx-auto">
+                    <div className="text-center mb-10 sm:mb-12">
+                        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">Get In Touch</h1>
+                        <p className="text-base sm:text-xl text-gray-600">
                             We'd love to hear from you. Send us a message and we'll respond as soon as possible.
                         </p>
                     </div>
-                    <div className="bg-white rounded-2xl shadow-xl p-8">
+                    <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {/* Name */}
                             <div>
@@ -132,8 +130,7 @@ const ContactForm = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleInputChange}
-                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.name ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                        }`}
+                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.name ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
                                     placeholder="Enter your full name"
                                     aria-label="Full name"
                                 />
@@ -152,8 +149,7 @@ const ContactForm = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.email ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                        }`}
+                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.email ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
                                     placeholder="Enter your email"
                                     aria-label="Email"
                                 />
@@ -172,8 +168,7 @@ const ContactForm = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleInputChange}
-                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                        }`}
+                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
                                     placeholder="Enter your phone number"
                                     aria-label="Phone"
                                 />
@@ -190,13 +185,10 @@ const ContactForm = () => {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleInputChange}
-                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.subject ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                        }`}
+                                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 ${errors.subject ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
                                     aria-label="Subject"
                                 >
-                                    <option value="" disabled hidden>
-                                        Select a subject
-                                    </option>
+                                    <option value="" disabled hidden>Select a subject</option>
                                     <option value="general">General Inquiry</option>
                                     <option value="game-guide">Game Guide Request</option>
                                     <option value="review">Game Review</option>
@@ -220,8 +212,7 @@ const ContactForm = () => {
                                     rows={5}
                                     value={formData.message}
                                     onChange={handleInputChange}
-                                    className={`w-full px-4 py-3 border rounded-lg resize-none focus:ring-2 focus:ring-orange-500 ${errors.message ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                        }`}
+                                    className={`w-full px-4 py-3 border rounded-lg resize-none focus:ring-2 focus:ring-orange-500 ${errors.message ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
                                     placeholder="Enter your message"
                                     aria-label="Message"
                                 />
