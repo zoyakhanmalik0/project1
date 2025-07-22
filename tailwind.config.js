@@ -11,7 +11,7 @@ export default {
   },
   plugins: [
     require('@tailwindcss/forms'),        // For better form element styling
-    require('@tailwindcss/typography'),   // For beautiful article/blog text
+    // require('@tailwindcss/typography'),   // For beautiful article/blog text
     require('@tailwindcss/aspect-ratio'), // For controlling image/video ratios
   ],
 };
