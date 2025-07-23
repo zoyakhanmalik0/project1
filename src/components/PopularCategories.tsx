@@ -65,7 +65,7 @@ const PopularCategories = () => {
       <div className="text-center mt-10">
         <button
           className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold transition-colors"
-          onClick={() => navigate('/all-categories')}
+          onClick={() => navigate(0)}
         >
           Explore Them All
         </button>
