@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://officialamy.online",
+  "homepage": "https://zoyakhanmalik0.github.io/project1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
