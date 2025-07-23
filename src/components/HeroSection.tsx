@@ -15,19 +15,19 @@ const DownloadPage = () => {
       </div>
 
       {/* First Set of Download Buttons */}
+      <a href="https://dragontigerclub.pk/?from_gameid=5790598&channelCode=5106107" target="_blank" rel="noopener noreferrer"
+        className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-green-400 to-emerald-600 text-white text-lg font-semibold py-4 px-6 rounded-xl shadow-lg hover:from-green-500 hover:to-emerald-700 transition duration-300"
+      >
+        <Download size={20} />
+        Download 3 Patti DragonTigerClub
+      </a>
+
       <div className="w-full max-w-md space-y-4 mb-10">
         <a href="https://3pattiteen.com/?from_gameid=8290658&channelCode=100000" target="_blank" rel="noopener noreferrer"
           className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-pink-500 to-red-600 text-white text-lg font-semibold py-4 px-6 rounded-xl shadow-lg hover:from-pink-600 hover:to-red-700 transition duration-300"
         >
           <Download size={20} />
           Download 3 Patti Teen
-        </a>
-
-        <a href="https://dragontigerclub.pk/?from_gameid=5790598&channelCode=5106107" target="_blank" rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-green-400 to-emerald-600 text-white text-lg font-semibold py-4 px-6 rounded-xl shadow-lg hover:from-green-500 hover:to-emerald-700 transition duration-300"
-        >
-          <Download size={20} />
-          Download 3 Patti DragonTigerClub
         </a>
 
         <a href="https://3pattino1.net/?from_gameid=7688535&channelCode=100000" target="_blank" rel="noopener noreferrer"
@@ -37,6 +37,13 @@ const DownloadPage = () => {
           Download 3 Patti No 1
         </a>
       </div>
+
+      <a href="https://flyingchess.com/?from_gameid=8290658&channelCode=100000" target="_blank" rel="noopener noreferrer"
+        className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-lg font-semibold py-4 px-6 rounded-xl shadow-lg hover:from-indigo-600 hover:to-purple-700 transition duration-300"
+      >
+        <Download size={20} />
+        Download Flying Chess
+      </a>
 
       {/* Second Image Section */}
       <div className="w-full max-w-3xl mb-10">
@@ -49,12 +56,7 @@ const DownloadPage = () => {
 
       {/* Second Set of Download Buttons */}
       <div className="w-full max-w-md space-y-4 mb-10">
-        <a href="https://flyingchess.com/?from_gameid=8290658&channelCode=100000" target="_blank" rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-lg font-semibold py-4 px-6 rounded-xl shadow-lg hover:from-indigo-600 hover:to-purple-700 transition duration-300"
-        >
-          <Download size={20} />
-          Download Flying Chess
-        </a>
+
 
         <a href="https://dragontigerclub.pk/?from_gameid=5790598&channelCode=5106107" target="_blank" rel="noopener noreferrer"
           className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-lg font-semibold py-4 px-6 rounded-xl shadow-lg hover:from-sky-600 hover:to-blue-700 transition duration-300"
